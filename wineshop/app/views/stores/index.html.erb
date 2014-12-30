@@ -1,0 +1,17 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+		<ul>
+			<li><%= link_to "Add A New Wine", new_wine_path %></li>
+			<li><%= link_to "Add more wine stores!", new_store_path %></li>
+		</ul>
+</div>
+
+<h1>All our stores</h1>
+
+<ul>
+	
+	<% @stores.each do |store| %>
+	<li><%= store.name %></li>
+
+	<% end %>
+	
+</ul>

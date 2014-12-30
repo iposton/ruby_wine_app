@@ -1,0 +1,18 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+		<ul>
+			<li><%= link_to "Add A New Wine", new_wine_path %></li>
+		</ul>
+</div>
+
+<h1>Choice Wines</h1>
+	
+
+<ol>
+
+	<% @wines.each do |wine| %>
+
+	<p><li> <%= wine.name %> -- <%= wine.grape %> -- <button class="pure-menu pure-button"><%= link_to "More info", wine_path(wine) %></button></li></p>
+
+	<% end %>
+
+</ol>

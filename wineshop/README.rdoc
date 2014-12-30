@@ -1,0 +1,4 @@
+== README Wine app with fully functional crud
+
+With htis app I can log wine brands, the grape, the region and the year. I can update edit and delete the data. This app was made with Ruby 4 and data is stored on mongoDB. 
+
