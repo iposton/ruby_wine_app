@@ -1,0 +1,29 @@
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+		<ul>
+			<li><%= link_to "Add A New Wine", new_wine_path %></li>
+			<li><%= link_to "Add more wine stores", new_store_path %></li>
+			<li><%= link_to "Back to list", wines_path %></li>
+		</ul>
+</div>
+
+<h1>Edit this Wine!</h1>
+
+<%= form_for @wine do |f| %>
+
+	Name: <%= f.text_field :name %>
+	Grape: <%= f.text_field :grape %>
+	Region: <%= f.text_field :region %>
+	Year: <%= f.text_field :year %>
+
+	<div>
+		
+		<p><%= f.label :store %><%= f.collection_select :store, Store.all, :id, :name  %></p>
+
+    </div>
+
+
+	<%= f.submit "Submit Changes!" %>
+
+	<% end %>
+
+	
