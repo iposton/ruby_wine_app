@@ -78,7 +78,7 @@ production:
      # Use environment variables or a config file to keep your
      # credentials safe e.g. <%= ENV['MONGOLAB_URI'] %>.
      #uri: 'mongodb://username:password@host1:port1,host2:port2/database'
-     uri: 'mongodb://ian:test@ds029831.mongolab.com:29831/ianwineshop'
+     uri: 'mongodb://ian:test@ds029821.mongolab.com:29821/heroku_app32928168'
 
      options:
        # max_retries specifies the number of times to attempt
