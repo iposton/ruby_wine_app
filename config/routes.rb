@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :stores 
-
+  root "wines#index"
   get "wines/" => "wines#index"
 
   get "wines/new" => "wines#new", as: :new_wine

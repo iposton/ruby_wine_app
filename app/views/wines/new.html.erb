@@ -6,30 +6,48 @@
 		</ul>
 </div>
 
+<div class="container">
+	<h1>Add a New Wine!</h1>
 
-<h1>Add a New Wine!</h1>
+    
+	 <%= form_for @wine, html: { multipart: true } do |f| %>
+	  <% if @wine.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@wine.errors.count, "error") %> prohibited this wine from being saved:</h2>
 
-    <%= form_for @wine do |f| %>
+	      <ul>
+		      <% @wine.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
 
-	Name: <%= f.text_field :name %>
-	Grape: <%= f.text_field :grape %>
-	Region: <%= f.text_field :region %>
-	Year: <%= f.text_field :year %>
+	  <div class="form-group">
+	    <%= f.label :Name %><br>
+	    <%= f.text_field :name, class: 'form-control' %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.label :Grape %><br>
+	    <%= f.text_field :grape, class: 'form-control' %>
+	  </div>
+	  	<div class="form-group">
+	    <%= f.label :Region %><br>
+	    <%= f.text_field :region, class: 'form-control' %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.label :Year %><br>
+	    <%= f.text_field :year, class: 'form-control' %>
+	  </div>
+	  <div class="form-group">
+	   		<p><%= f.label :Store %><%= f.collection_select :store, Store.all, :id, :name  %></p>
+	   </div>
+	  <div class="actions">
+	    <%= f.submit 'Add New Wine!', class: 'btn btn-warning' %>
+	  </div>
+	<% end %>
 
-	<div>
-		
-		<p><%= f.label :store %><%= f.collection_select :store, Store.all, :id, :name  %></p>
-
-    </div>
-
-	<div>
-
-	  <%= f.submit "Add New Wine!" %>
-
-	</div>
-
-
-<% end %>
+</div> <!-- end container -->
 
 
 

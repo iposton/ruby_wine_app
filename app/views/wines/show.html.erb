@@ -10,11 +10,11 @@
 
 <h1> <%= @wine.name %> </h1>
 
-  <p>This is a <%= @wine.grape %> from <%= @wine.region %> and it was produced in <%= @wine.year %></p> 
+  <h3>This is a <%= @wine.grape %> from <%= @wine.region %> and it was produced in <%= @wine.year %></h3> 
 
   <% if @wine.store %>
 
-    <p>It is sold by <%= @wine.store.name %>.</p>
+    <h3>It is sold by <%= @wine.store.name %>.</h3>
 
 <% end %>
 

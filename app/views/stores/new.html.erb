@@ -12,11 +12,17 @@
 
 <%= form_for @store do |f| %>
 
-<div>
+<div class="container">
 	
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	<%= f.submit "Add Store!" %>
+	
+	
+	  <div class="form-group">
+	    <%= f.label :Name %><br>
+	    <%= f.text_field :name, class: 'form-control' %>
+	  </div>
+	 <div class="actions">
+	    <%= f.submit 'Add New Store!', class: 'btn btn-warning' %>
+</div>
 
 </div>
 

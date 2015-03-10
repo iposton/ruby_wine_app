@@ -11,7 +11,7 @@
 
 	<% @wines.each do |wine| %>
 
-	<p><li> <%= wine.name %> -- <%= wine.grape %> -- <button class="pure-menu pure-button"><%= link_to "More info", wine_path(wine) %></button></li></p>
+	<h3><li> <%= wine.name %> | <%= wine.grape %> | <button class="pure-menu pure-button"><%= link_to "More info", wine_path(wine) %></button></li></h3>
 
 	<% end %>
 
