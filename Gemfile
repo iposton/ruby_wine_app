@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-# ruby '2.1.3'
+ruby '2.1.3'
 gem 'mongoid', '~> 4.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -14,7 +14,6 @@ gem 'pure-css-rails', '~> 0.5.0.1'
 gem 'autoprefixer-rails'
 # include rails_12factor to allow static assets on heroku
 group :production, :staging do
-	gem "pg"
     gem 'rails_12factor'
  end
 gem 'jquery-rails'

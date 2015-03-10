@@ -68,7 +68,7 @@ test:
         max_retries: 1
         retry_interval: 0
 
-          # mongoid 4.x
+# mongoid 4.x
 #
 production:
  sessions:
@@ -77,8 +77,7 @@ production:
      # replica set connection setup.
      # Use environment variables or a config file to keep your
      # credentials safe e.g. <%= ENV['MONGOLAB_URI'] %>.
-     #uri: 'mongodb://username:password@host1:port1,host2:port2/database'
-     uri: 'mongodb://ian:test@ds029821.mongolab.com:29821/heroku_app32928168'
+     uri: <%= ENV['MONGOLAB_URI'] %>
 
      options:
        # max_retries specifies the number of times to attempt
@@ -104,9 +103,4 @@ production:
        # refresh_interval specifies the number of seconds to cache server information.
        # Lowering this number will help the driver recover more quickly from changes to replica set reconfiguration
        refresh_interval: 10
-
-       # pool_size default size is 5 connections.
-       # If you're running a lot of threads, you may consider increasing pool_size
-       # to the number of threads you're running e.g.
-       # poolsize: <%= ENV['NUM_THREADS'] %>
 
